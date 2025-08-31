@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, CheckCircle } from "lucide-react";
+import WaitlistCounter from "@/components/WaitlistCounter";
+import CustomPhoneInput from "@/components/PhoneInput";
 
 export default function WaitlistForm() {
   const [formData, setFormData] = useState({
@@ -51,6 +53,13 @@ export default function WaitlistForm() {
     }));
   };
 
+  const handlePhoneChange = (phone: string) => {
+    setFormData(prev => ({
+      ...prev,
+      phone: phone
+    }));
+  };
+
   if (isSubmitted) {
     return (
       <section id="waitlist" className="py-20 bg-gradient-subtle">
@@ -78,9 +87,10 @@ export default function WaitlistForm() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Sé de los primeros en usar Siriux
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Únete a nuestra lista de espera y obtén acceso prioritario a la revolución financiera.
           </p>
+          <WaitlistCounter />
         </div>
         
         <Card className="max-w-md mx-auto border-0 shadow-elegant animate-fade-in-up">
@@ -121,13 +131,10 @@ export default function WaitlistForm() {
               
               <div className="space-y-2">
                 <Label htmlFor="phone">Teléfono (opcional)</Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="+1 234 567 8900"
+                <CustomPhoneInput
                   value={formData.phone}
-                  onChange={handleChange}
+                  onChange={handlePhoneChange}
+                  placeholder="Número de teléfono"
                   className="transition-all duration-300 focus:shadow-glow"
                 />
               </div>
