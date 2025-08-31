@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Partners from "@/components/Partners";
+import WaitlistForm from "@/components/WaitlistForm";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const waitlistRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWaitlist = () => {
+    waitlistRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header onWaitlistClick={scrollToWaitlist} />
+      <main>
+        <Hero onScrollToWaitlist={scrollToWaitlist} />
+        <Features />
+        <Partners />
+        <div ref={waitlistRef}>
+          <WaitlistForm />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };
