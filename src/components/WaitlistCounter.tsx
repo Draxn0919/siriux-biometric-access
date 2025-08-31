@@ -2,7 +2,7 @@ import { Users } from "lucide-react";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
 
 export default function WaitlistCounter() {
-  const { count, loading } = useWaitlistCount();
+  const { count, loading, error } = useWaitlistCount();
 
   if (loading) {
     return (
@@ -10,6 +10,18 @@ export default function WaitlistCounter() {
         <div className="flex items-center space-x-2">
           <Users className="w-5 h-5 text-muted-foreground animate-pulse" />
           <span className="text-sm text-muted-foreground">Cargando...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    console.error('WaitlistCounter error:', error);
+    return (
+      <div className="flex items-center justify-center p-4 bg-gradient-subtle rounded-lg border border-destructive/50">
+        <div className="flex items-center space-x-2">
+          <Users className="w-5 h-5 text-destructive" />
+          <span className="text-sm text-destructive">Error al cargar</span>
         </div>
       </div>
     );

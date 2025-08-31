@@ -9,18 +9,25 @@ export const useWaitlistCount = () => {
   const fetchCount = async () => {
     try {
       setLoading(true);
-      // Use count() from the table directly instead of rpc
-      const { count, error } = await supabase
+      console.log('Fetching waitlist count...');
+      
+      // Simplified query to get count
+      const { data, error, count: totalCount } = await supabase
         .from('waitlist')
-        .select('*', { count: 'exact', head: true });
+        .select('id', { count: 'exact' });
       
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
       
-      setCount(count || 0);
+      const actualCount = totalCount || 0;
+      console.log('Waitlist count received:', actualCount);
+      setCount(actualCount);
       setError(null);
     } catch (err: any) {
-      setError(err.message);
       console.error('Error fetching waitlist count:', err);
+      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -30,8 +37,9 @@ export const useWaitlistCount = () => {
     fetchCount();
 
     // Subscribe to real-time updates
+    console.log('Setting up realtime subscription...');
     const channel = supabase
-      .channel('waitlist_changes')
+      .channel('waitlist_realtime')
       .on(
         'postgres_changes',
         {
@@ -39,13 +47,17 @@ export const useWaitlistCount = () => {
           schema: 'public',
           table: 'waitlist'
         },
-        () => {
+        (payload) => {
+          console.log('New user registered!', payload);
           fetchCount(); // Refetch count when new user joins
         }
       )
-      .subscribe();
+      .subscribe((status) => {
+        console.log('Realtime subscription status:', status);
+      });
 
     return () => {
+      console.log('Cleaning up realtime subscription');
       supabase.removeChannel(channel);
     };
   }, []);
