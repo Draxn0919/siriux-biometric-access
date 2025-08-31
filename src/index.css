@@ -119,44 +119,4 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
-
-  /* Phone input styles */
-  .phone-input-container .react-tel-input .flag-dropdown {
-    background-color: hsl(var(--background)) !important;
-    border-color: hsl(var(--border)) !important;
-  }
-
-  .phone-input-container .react-tel-input .flag-dropdown:hover {
-    background-color: hsl(var(--muted)) !important;
-  }
-
-  .phone-input-container .react-tel-input .country-list {
-    background-color: hsl(var(--popover)) !important;
-    border-color: hsl(var(--border)) !important;
-    color: hsl(var(--popover-foreground)) !important;
-    box-shadow: var(--shadow-elegant);
-    z-index: 999 !important;
-  }
-
-  .phone-input-container .react-tel-input .country-list .country:hover {
-    background-color: hsl(var(--accent)) !important;
-    color: hsl(var(--accent-foreground)) !important;
-  }
-
-  .phone-input-container .react-tel-input .country-list .country.highlight {
-    background-color: hsl(var(--accent)) !important;
-    color: hsl(var(--accent-foreground)) !important;
-  }
-
-  .phone-input-container .react-tel-input input:focus {
-    border-color: hsl(var(--ring)) !important;
-    outline: none !important;
-    box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2) !important;
-  }
-
-  .phone-input-container .react-tel-input .flag-dropdown:focus {
-    border-color: hsl(var(--ring)) !important;
-    outline: none !important;
-    box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2) !important;
-  }
 }
