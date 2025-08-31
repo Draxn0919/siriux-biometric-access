@@ -31,6 +31,10 @@ export default function WaitlistForm() {
       if (error) throw error;
 
       setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", phone: "" });
+      }, 3000);
       toast({
         title: "¡Registro exitoso!",
         description: "Te contactaremos pronto con novedades de Siriux.",
