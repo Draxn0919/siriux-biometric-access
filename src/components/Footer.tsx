@@ -35,7 +35,7 @@ export default function Footer() {
           
           <div className="flex justify-end space-x-4">
             <a 
-              href="#" 
+              href="https://www.instagram.com/siriux_tech" 
               className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 transform hover:scale-110"
             >
               <Instagram className="w-5 h-5" />
