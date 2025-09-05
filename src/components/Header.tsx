@@ -10,9 +10,9 @@ export default function Header({ onWaitlistClick }: HeaderProps) {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/871db1f0-658c-4abb-a06c-2cc21a334fe3.png" 
+            src="/lovable-uploads/61d77377-e7ac-424d-8b64-fb165e1df198.png" 
             alt="Siriux Logo" 
-            className="h-8 object-contain"
+            className="h-10 object-contain"
           />
         </div>
         

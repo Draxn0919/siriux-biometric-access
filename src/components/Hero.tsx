@@ -48,11 +48,10 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
               
               <div className="relative rounded-2xl shadow-elegant overflow-hidden">
                 <img 
-                  src={mobileAppImage} 
-                  alt="App móvil Siriux - Servicios financieros seguros" 
-                  className="w-full h-64 object-cover"
+                  src="/lovable-uploads/386528f5-1c97-4221-a452-f36775545569.png" 
+                  alt="Siriux - Plataforma financiera digital" 
+                  className="w-full h-64 object-contain bg-white p-8"
                 />
-                <div className="absolute inset-0 bg-gradient-accent/10"></div>
               </div>
             </div>
             
