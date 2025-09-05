@@ -3,9 +3,9 @@ import { Instagram, Linkedin, Globe } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "María González",
-    role: "CEO & Co-fundadora",
-    description: "Experta en fintech e inclusión financiera",
+    name: "Sarit Daniela Sanchez",
+    role: "CEO & Fundadora",
+    description: "Economista experta en fintech e inclusión financiera",
     image: "/lovable-uploads/placeholder-avatar.png",
     social: {
       linkedin: "#",
@@ -13,9 +13,9 @@ const teamMembers = [
     }
   },
   {
-    name: "Carlos Mendoza", 
+    name: "Daniel Rivera Yepes", 
     role: "CTO & Co-fundador",
-    description: "Especialista en biometría y blockchain",
+    description: "Ing. Mecatronico, Especialista en Inteligencia Artificial",
     image: "/lovable-uploads/placeholder-avatar.png",
     social: {
       linkedin: "#",
