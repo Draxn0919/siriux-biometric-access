@@ -18,7 +18,7 @@ export default function SocialBanner() {
               variant="secondary"
               size="lg"
               className="bg-white/10 text-white border-white/20 hover:bg-white hover:text-primary transition-all duration-300"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('https://www.instagram.com/siriux_tech', '_blank')}
             >
               <Instagram className="w-5 h-5 mr-2" />
               Instagram
