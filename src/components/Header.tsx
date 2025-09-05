@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Building2 } from "lucide-react";
+import { Scan } from "lucide-react";
 
 interface HeaderProps {
   onWaitlistClick: () => void;
@@ -9,17 +9,20 @@ export default function Header({ onWaitlistClick }: HeaderProps) {
   return (
     <header className="w-full bg-background/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <Building2 className="w-5 h-5 text-white" />
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow">
+            <Scan className="w-6 h-6 text-white" />
           </div>
-          <span className="text-2xl font-bold text-foreground">Siriux</span>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold text-primary">Siriux</span>
+            <span className="text-xs text-muted-foreground -mt-1">Fintech biométrico</span>
+          </div>
         </div>
         
         <Button 
           variant="outline" 
           onClick={onWaitlistClick}
-          className="transition-all duration-300 hover:shadow-glow"
+          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow"
         >
           Lista de espera
         </Button>

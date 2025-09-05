@@ -3,16 +3,16 @@ import { Building2, CreditCard, Shield, Zap } from "lucide-react";
 const partners = [
   { name: "Western Union", icon: CreditCard },
   { name: "Bancos Locales", icon: Building2 },
-  { name: "Sistemas de Llaves", icon: Shield },
+  { name: "Sistemas de Seguridad", icon: Shield },
   { name: "FinTech Partners", icon: Zap }
 ];
 
 export default function Partners() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
             Aliados que confían en nuestra visión
           </h2>
           <p className="text-muted-foreground">
@@ -26,10 +26,10 @@ export default function Partners() {
             return (
               <div 
                 key={partner.name}
-                className="flex flex-col items-center justify-center p-6 bg-background rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 animate-fade-in-up"
+                className="flex flex-col items-center justify-center p-6 bg-background rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 animate-fade-in-up border border-primary/10"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-3">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 shadow-glow">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-sm font-medium text-foreground text-center">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import biometricImage from "@/assets/biometric-scanning.jpg";
+import mobileAppImage from "@/assets/siriux-mobile-app.jpg";
 
 interface HeroProps {
   onScrollToWaitlist: () => void;
@@ -8,19 +9,19 @@ interface HeroProps {
 
 export default function Hero({ onScrollToWaitlist }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Accede al sistema financiero{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-accent drop-shadow-gold">
                 sin fronteras
               </span>
               , solo con tus datos biométricos.
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
               En Siriux ayudamos a migrantes a crear cuentas bancarias y enviar dinero 
               internacionalmente sin necesidad de documentos obligatorios.
             </p>
@@ -28,7 +29,7 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
             <Button 
               size="lg"
               onClick={onScrollToWaitlist}
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-lg px-8 py-6"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-gold transition-all duration-300 transform hover:scale-105 text-lg px-8 py-6 font-semibold"
             >
               Únete a la lista de espera
               <ArrowDown className="ml-2 w-5 h-5" />
@@ -36,18 +37,29 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
           </div>
           
           <div className="relative animate-fade-in delay-300">
-            <div className="relative rounded-2xl shadow-elegant overflow-hidden">
-              <img 
-                src={heroImage} 
-                alt="Tecnología biométrica Siriux" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-hero opacity-20"></div>
+            <div className="grid grid-cols-1 gap-6">
+              <div className="relative rounded-2xl shadow-elegant overflow-hidden">
+                <img 
+                  src={biometricImage} 
+                  alt="Tecnología biométrica Siriux - Reconocimiento facial seguro" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-primary/20"></div>
+              </div>
+              
+              <div className="relative rounded-2xl shadow-elegant overflow-hidden">
+                <img 
+                  src={mobileAppImage} 
+                  alt="App móvil Siriux - Servicios financieros seguros" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-gold/10"></div>
+              </div>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary-glow/10 rounded-full animate-pulse delay-1000"></div>
+            {/* Floating elements with wine red theme */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary-glow/20 rounded-full animate-pulse delay-1000"></div>
           </div>
         </div>
       </div>
