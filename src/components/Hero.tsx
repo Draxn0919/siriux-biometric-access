@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import biometricImage from "@/assets/biometric-scanning.jpg";
 import mobileAppImage from "@/assets/siriux-mobile-app.jpg";
 
 interface HeroProps {
@@ -40,11 +39,11 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
             <div className="grid grid-cols-1 gap-6">
               <div className="relative rounded-2xl shadow-elegant overflow-hidden">
                 <img 
-                  src={biometricImage} 
-                  alt="Tecnología biométrica Siriux - Reconocimiento facial seguro" 
+                  src="/lovable-uploads/6e80e240-f4b1-4c01-beb8-e0434c3bd2af.png" 
+                  alt="Cuenta creada con tu rostro - Siriux" 
                   className="w-full h-64 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-primary/20"></div>
+                <div className="absolute inset-0 bg-gradient-primary/10"></div>
               </div>
               
               <div className="relative rounded-2xl shadow-elegant overflow-hidden">
