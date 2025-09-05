@@ -14,16 +14,15 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Accede al sistema financiero{" "}
+              Accede al sistema financiero y digital{" "}
               <span className="text-accent drop-shadow-gold">
                 sin fronteras
               </span>
-              , solo con tus datos biométricos.
             </h1>
             
             <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
-              En Siriux ayudamos a migrantes a crear cuentas bancarias y enviar dinero 
-              internacionalmente sin necesidad de documentos obligatorios.
+              Con Siriux, abre tu cuenta digital sin necesidad de documentos locales. 
+              Recibe tu salario, guarda dinero y envía remesas de forma segura y sencilla.
             </p>
             
             <Button 

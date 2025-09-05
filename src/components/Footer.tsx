@@ -1,4 +1,4 @@
-import { Building2, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Building2, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -38,12 +38,6 @@ export default function Footer() {
               href="#" 
               className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 transform hover:scale-110"
             >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 transform hover:scale-110"
-            >
               <Instagram className="w-5 h-5" />
             </a>
             <a 
@@ -55,7 +49,10 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-background/20 mt-8 pt-8 text-center">
+        <div className="border-t border-background/20 mt-8 pt-8 text-center space-y-4">
+          <p className="text-background/80 text-sm">
+            <em>*Siriux es una plataforma digital en desarrollo, no un banco</em>
+          </p>
           <p className="text-background/60">
             © 2024 Siriux. Todos los derechos reservados. Revolucionando el acceso financiero global.
           </p>
