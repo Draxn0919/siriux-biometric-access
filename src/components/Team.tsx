@@ -21,16 +21,6 @@ const teamMembers = [
       linkedin: "#",
       instagram: "#"
     }
-  },
-  {
-    name: "Ana Rodríguez",
-    role: "Head of Product",
-    description: "Diseño centrado en el usuario migrante", 
-    image: "/lovable-uploads/placeholder-avatar.png",
-    social: {
-      linkedin: "#",
-      instagram: "#"
-    }
   }
 ];
 
@@ -47,7 +37,7 @@ export default function Team() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card 
               key={member.name}
