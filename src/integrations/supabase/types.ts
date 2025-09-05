@@ -16,25 +16,31 @@ export type Database = {
     Tables: {
       waitlist: {
         Row: {
+          country: string | null
           created_at: string
           email: string
           id: string
+          interests: string[] | null
           name: string
           phone: string | null
           updated_at: string
         }
         Insert: {
+          country?: string | null
           created_at?: string
           email: string
           id?: string
+          interests?: string[] | null
           name: string
           phone?: string | null
           updated_at?: string
         }
         Update: {
+          country?: string | null
           created_at?: string
           email?: string
           id?: string
+          interests?: string[] | null
           name?: string
           phone?: string | null
           updated_at?: string

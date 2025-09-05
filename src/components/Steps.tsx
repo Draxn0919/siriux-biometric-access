@@ -27,7 +27,7 @@ const steps = [
     title: "Administra y ahorra",
     description: "Gestiona tus finanzas y construye tu futuro económico",
     icon: Wallet,
-    color: "bg-secondary"
+    color: "bg-accent"
   }
 ];
 

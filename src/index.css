@@ -30,9 +30,9 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    /* Accent: Gold #D4AF37 for wealth/fintech elements */
-    --accent: 43 74% 53%;
-    --accent-foreground: 0 0% 0%;
+    /* Accent: Reduced gold usage, more black emphasis */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -41,17 +41,17 @@ All colors MUST be HSL.
     --input: 0 0% 91%;
     --ring: 345 100% 25%;
 
-    /* Custom Gradients - Wine Red Theme */
-    --gradient-primary: linear-gradient(135deg, hsl(345 100% 25%), hsl(345 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(345 100% 15%) 0%, hsl(345 100% 25%) 50%, hsl(345 100% 35%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 53%), hsl(43 74% 63%));
+    /* Custom Gradients - Less Gold, More Black */
+    --gradient-primary: linear-gradient(135deg, hsl(345 100% 25%), hsl(0 0% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(345 100% 25%) 50%, hsl(0 0% 15%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 95%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
 
-    /* Custom Shadows - Wine Red Theme */
-    --shadow-elegant: 0 10px 30px -10px hsl(345 100% 25% / 0.3);
-    --shadow-glow: 0 0 40px hsl(345 100% 35% / 0.4);
-    --shadow-card: 0 4px 20px -4px hsl(345 50% 25% / 0.15);
-    --shadow-gold: 0 0 20px hsl(43 74% 53% / 0.3);
+    /* Custom Shadows - Less Gold, More Subtle */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
+    --shadow-glow: 0 0 40px hsl(345 100% 35% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-accent: 0 0 20px hsl(0 0% 15% / 0.2);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,8 +94,8 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 43 74% 53%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;

@@ -28,7 +28,7 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
             <Button 
               size="lg"
               onClick={onScrollToWaitlist}
-              className="bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-gold transition-all duration-300 transform hover:scale-105 text-lg px-8 py-6 font-semibold"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-accent transition-all duration-300 transform hover:scale-105 text-lg px-8 py-6 font-semibold"
             >
               Únete a la lista de espera
               <ArrowDown className="ml-2 w-5 h-5" />
@@ -52,12 +52,12 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
                   alt="App móvil Siriux - Servicios financieros seguros" 
                   className="w-full h-64 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-gold/10"></div>
+                <div className="absolute inset-0 bg-gradient-accent/10"></div>
               </div>
             </div>
             
             {/* Floating elements with wine red theme */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full animate-pulse"></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/30 rounded-full animate-pulse"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary-glow/20 rounded-full animate-pulse delay-1000"></div>
           </div>
         </div>

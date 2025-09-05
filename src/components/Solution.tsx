@@ -52,8 +52,8 @@ export default function Solution() {
           <div className="relative animate-fade-in delay-300">
             <div className="relative rounded-2xl shadow-elegant overflow-hidden">
               <img 
-                src={biometricImage} 
-                alt="Tecnología biométrica Siriux - Acceso sin documentos" 
+                src="/lovable-uploads/2c1165c2-8a1f-4f69-abed-1d32953a3605.png" 
+                alt="Cuenta creada con tu rostro - Tecnología biométrica Siriux" 
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-primary/20"></div>

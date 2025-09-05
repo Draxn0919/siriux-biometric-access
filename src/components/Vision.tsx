@@ -16,9 +16,9 @@ export default function Vision() {
           </h2>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
-            <Globe className="w-16 h-16 text-accent mx-auto mb-6" />
+            <Globe className="w-16 h-16 text-white mx-auto mb-6" />
             <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
-              Queremos <span className="text-accent font-bold">ser la plataforma líder en inclusión financiera 
+              Queremos <span className="text-white font-bold">ser la plataforma líder en inclusión financiera 
               para migrantes en Latinoamérica y el mundo</span>, transformando la manera en que reciben y envían dinero, 
               y construyendo un futuro donde ningún migrante quede fuera del sistema financiero.
             </p>

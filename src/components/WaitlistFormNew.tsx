@@ -109,7 +109,7 @@ export default function WaitlistFormNew() {
         <div className="container mx-auto px-4">
           <Card className="max-w-md mx-auto border-0 shadow-elegant animate-scale-in">
             <CardContent className="p-8 text-center">
-              <CheckCircle className="w-16 h-16 text-accent mx-auto mb-6" />
+              <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 ¡Bienvenido a Siriux!
               </h3>
