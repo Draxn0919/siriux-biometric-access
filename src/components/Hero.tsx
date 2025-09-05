@@ -14,7 +14,7 @@ export default function Hero({ onScrollToWaitlist }: HeroProps) {
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Accede al sistema financiero y digital{" "}
-              <span className="text-accent drop-shadow-gold">
+              <span className="text-[#FFB800] drop-shadow-gold font-extrabold">
                 sin fronteras
               </span>
             </h1>

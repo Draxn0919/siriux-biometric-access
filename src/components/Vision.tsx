@@ -1,4 +1,4 @@
-import { Target, Globe } from "lucide-react";
+import { Target, Globe, Telescope } from "lucide-react";
 
 export default function Vision() {
   return (
@@ -6,8 +6,8 @@ export default function Vision() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="flex justify-center mb-8">
-            <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <Target className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-white/10 flex items-center justify-center backdrop-blur-sm transform -rotate-45">
+              <Telescope className="w-10 h-10 text-white rotate-45" />
             </div>
           </div>
           

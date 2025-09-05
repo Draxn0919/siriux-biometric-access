@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Instagram, Linkedin, Globe } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
+import sarit from "@/assets/SaritDaniela.png";
+import daniel from "@/assets/DanielRivera.jpg"; // Asegúrate de tener esta imagen en la carpeta assets
 
 const teamMembers = [
 	{
@@ -7,7 +9,7 @@ const teamMembers = [
 		role: "CEO & Fundadora",
 		description:
 			"Fundadora de Siriux, estudiante de Economía y migrante. Cree en la inclusión financiera como motor de desarrollo y crea tecnología para hacerlo posible.",
-		image: "/lovable-uploads/placeholder-avatar.png",
+		image: sarit,
 		social: {
 			linkedin: "https://www.linkedin.com/in/saritsitaa",
 			instagram: "https://www.instagram.com/saritsitaa",
@@ -18,7 +20,7 @@ const teamMembers = [
 		role: "CTO & Ai Developer",
 		description:
 			"Responsable tecnológico de Siriux. Apasionado por resolver problemas con código, desarrolla la plataforma digital que facilita el acceso simple y seguro a servicios financieros.",
-		image: "/lovable-uploads/placeholder-avatar.png",
+		image: daniel,
 		social: {
 			linkedin: "https://www.linkedin.com/in/danrivera9",
 			instagram: "https://www.instagram.com/danrivera_9",
@@ -48,11 +50,19 @@ export default function Team() {
 						>
 							<CardContent className="p-8 text-center">
 								<div className="relative mb-6">
-									<div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center shadow-glow">
-										<span className="text-white text-2xl font-bold">
-											{member.name.split(" ").map((n) => n[0]).join("")}
-										</span>
-									</div>
+									{member.image ? (
+										<img
+											src={member.image}
+											alt={member.name}
+											className="w-24 h-24 object-cover rounded-full mx-auto mb-4 shadow-glow border-4 border-white"
+										/>
+									) : (
+										<div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center shadow-glow">
+											<span className="text-white text-2xl font-bold">
+												{member.name.split(" ").map((n) => n[0]).join("")}
+											</span>
+										</div>
+									)}
 								</div>
 
 								<h3 className="text-xl font-bold text-foreground mb-2">

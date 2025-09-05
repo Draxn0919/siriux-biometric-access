@@ -1,4 +1,4 @@
-import { AlertTriangle, Ban } from "lucide-react";
+import { AlertTriangle, Ban, DollarSign, DollarSignIcon, HelpCircle, Info, Wallet, Percent } from "lucide-react";
 
 export default function Problem() {
   return (
@@ -7,7 +7,7 @@ export default function Problem() {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="flex justify-center mb-8">
             <div className="w-20 h-20 bg-destructive/10 rounded-full flex items-center justify-center">
-              <AlertTriangle className="w-10 h-10 text-destructive" />
+              <Wallet className="w-10 h-10 text-destructive" />
             </div>
           </div>
           
@@ -32,7 +32,7 @@ export default function Problem() {
             </div>
             
             <div className="flex flex-col items-center p-6">
-              <AlertTriangle className="w-12 h-12 text-destructive mb-4" />
+              <DollarSignIcon className="w-12 h-12 text-destructive mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 Solo efectivo
               </h3>
@@ -42,9 +42,7 @@ export default function Problem() {
             </div>
             
             <div className="flex flex-col items-center p-6">
-              <div className="w-12 h-12 bg-destructive rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold text-lg">%</span>
-              </div>
+              <Percent className="w-12 h-12 text-destructive mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 Comisiones altas
               </h3>
